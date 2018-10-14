@@ -1,0 +1,6 @@
+framework module Pods__AK__iOS_Flickr {
+  umbrella header "Pods-[AK]_iOS_Flickr-umbrella.h"
+
+  export *
+  module * { export * }
+}
