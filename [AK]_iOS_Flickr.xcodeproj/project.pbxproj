@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D1B2D16217B707E00361BA6 /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1B2D15217B707E00361BA6 /* PopularViewController.swift */; };
 		4D968336217234A200AF84D1 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D968335217234A200AF84D1 /* CameraModel.swift */; };
 		4D97FAC9216E877400A3F100 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97FAC8216E877400A3F100 /* AppDelegate.swift */; };
 		4D97FACE216E877400A3F100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D97FACC216E877400A3F100 /* Main.storyboard */; };
@@ -17,11 +18,14 @@
 		4D97FAE0216E9A5F00A3F100 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D97FADE216E9A5F00A3F100 /* DetailTableViewCell.xib */; };
 		4D97FAE3216E9FA100A3F100 /* SimpleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D97FAE1216E9FA100A3F100 /* SimpleTableViewCell.swift */; };
 		4D97FAE4216E9FA100A3F100 /* SimpleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D97FAE2216E9FA100A3F100 /* SimpleTableViewCell.xib */; };
+		4DDDC023217B930A005D0909 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDDC022217B930A005D0909 /* PhotoCell.swift */; };
+		4DDDC025217BA8A4005D0909 /* PhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDDC024217BA8A4005D0909 /* PhotoModel.swift */; };
 		D5E59D67A92B77A041627F3D /* Pods__AK__iOS_Flickr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683150C19A10264B0D13DA6F /* Pods__AK__iOS_Flickr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0BB08702ECBAA1FDBAB7BFE1 /* Pods-[AK]_iOS_Flickr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-[AK]_iOS_Flickr.release.xcconfig"; path = "Pods/Target Support Files/Pods-[AK]_iOS_Flickr/Pods-[AK]_iOS_Flickr.release.xcconfig"; sourceTree = "<group>"; };
+		4D1B2D15217B707E00361BA6 /* PopularViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PopularViewController.swift; path = "[AK]_iOS_Flickr/PopularViewController.swift"; sourceTree = SOURCE_ROOT; };
 		4D968335217234A200AF84D1 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		4D97FAC5216E877400A3F100 /* [AK]_iOS_Flickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "[AK]_iOS_Flickr.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D97FAC8216E877400A3F100 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 		4D97FADE216E9A5F00A3F100 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
 		4D97FAE1216E9FA100A3F100 /* SimpleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleTableViewCell.swift; sourceTree = "<group>"; };
 		4D97FAE2216E9FA100A3F100 /* SimpleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleTableViewCell.xib; sourceTree = "<group>"; };
+		4DDDC022217B930A005D0909 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		4DDDC024217BA8A4005D0909 /* PhotoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoModel.swift; sourceTree = "<group>"; };
 		683150C19A10264B0D13DA6F /* Pods__AK__iOS_Flickr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods__AK__iOS_Flickr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6C2C745BFAD53E945433D6B /* Pods-[AK]_iOS_Flickr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-[AK]_iOS_Flickr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-[AK]_iOS_Flickr/Pods-[AK]_iOS_Flickr.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,7 +79,10 @@
 			children = (
 				4D97FADA216E88B500A3F100 /* Support */,
 				4D97FADB216E89B100A3F100 /* CamerasViewController.swift */,
+				4D1B2D15217B707E00361BA6 /* PopularViewController.swift */,
 				4D968335217234A200AF84D1 /* CameraModel.swift */,
+				4DDDC024217BA8A4005D0909 /* PhotoModel.swift */,
+				4DDDC022217B930A005D0909 /* PhotoCell.swift */,
 				4D97FADD216E9A5F00A3F100 /* DetailTableViewCell.swift */,
 				4D97FAE1216E9FA100A3F100 /* SimpleTableViewCell.swift */,
 				4D97FADE216E9A5F00A3F100 /* DetailTableViewCell.xib */,
@@ -245,10 +254,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DDDC023217B930A005D0909 /* PhotoCell.swift in Sources */,
+				4D1B2D16217B707E00361BA6 /* PopularViewController.swift in Sources */,
 				4D97FADF216E9A5F00A3F100 /* DetailTableViewCell.swift in Sources */,
 				4D97FAE3216E9FA100A3F100 /* SimpleTableViewCell.swift in Sources */,
 				4D968336217234A200AF84D1 /* CameraModel.swift in Sources */,
 				4D97FADC216E89B100A3F100 /* CamerasViewController.swift in Sources */,
+				4DDDC025217BA8A4005D0909 /* PhotoModel.swift in Sources */,
 				4D97FAC9216E877400A3F100 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

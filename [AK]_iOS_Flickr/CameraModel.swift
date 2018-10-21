@@ -52,7 +52,6 @@ struct CameraModel {
         let json = JSON(jsonData)
         let data = json["cameras"]["camera"].array
         guard let jsonArray = data else { return nil }
-        //print(jsonArray)
         for jsonObject in jsonArray {
             if jsonObject["details"].isEmpty {
                 let camera = CameraModel(json: jsonObject)
@@ -62,7 +61,6 @@ struct CameraModel {
                 cameras.append(camera)
             }
         }
-        //dump(cameras)
         return cameras
         
     }

@@ -47,14 +47,12 @@ class CamerasViewController: UIViewController, UITableViewDelegate, UITableViewD
                     }
                     self.camerasData = cameras
                     self.tableView.reloadData()
-                    //dump(self.camerasData)
                 case .failure(let error):
                     self.showAlert(error.localizedDescription)
-                    //print(error.localizedDescription)
                 }
             })
+            self.spinner.stopAnimating()
         }
-        spinner.stopAnimating()
         
     }
     
@@ -92,7 +90,6 @@ class CamerasViewController: UIViewController, UITableViewDelegate, UITableViewD
             
             return cell
         }
-        
     }
     
     //MARK: - UISearchBar
@@ -115,9 +112,13 @@ class CamerasViewController: UIViewController, UITableViewDelegate, UITableViewD
         searchBar.resignFirstResponder()
     }
     
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        spinner.stopAnimating()
+        searchBar.resignFirstResponder()
+    }
+    
     // Hide keyboard on touches outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.spinner.stopAnimating()
         self.view.endEditing(true)
     }
 
