@@ -49,8 +49,8 @@ struct PhotoModel {
 struct Photos {
     static func getCount(from jsonData: Any) -> Int? {
         let json = JSON(jsonData)
-        if let data = json["photos"]["total"].string {
-            return Int(data)
+        if let data = json["photos"]["total"].int {
+            return data
         } else {
             return nil
         }

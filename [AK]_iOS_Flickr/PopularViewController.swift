@@ -35,26 +35,26 @@ class PopularViewController: UIViewController {
     //MARK: - Main function
     
     private func fetchDataFromAPI(with page: Int) {
-        DispatchQueue.main.async {
+        DispatchQueue.main.async { [weak self] in
             let parameters: Parameters = [
                 "page": page,
-                "per_page": self.photosPerPage
+                "per_page": self!.photosPerPage
             ]
-            Alamofire.request(self.url, parameters: parameters).validate().responseJSON(completionHandler: { (response) in
+            Alamofire.request(self!.url, parameters: parameters).validate().responseJSON(completionHandler: { (response) in
                 switch response.result {
                 case .success(let value):
-                    if self.totalPhotos == nil {
-                        self.totalPhotos = Photos.getCount(from: value) ?? self.photosPerPage //get total photos, if nil, set default photos per page
+                    if self?.totalPhotos == nil {
+                        self?.totalPhotos = Photos.getCount(from: value) ?? self!.photosPerPage //get total photos, if nil, set default photos per page
                     }
                     //create URL from JSON
                     guard let photos = PhotoModel.createURL(from: value) else {
-                        self.showAlert(self.messageNotFound)
+                        self?.showAlert(self!.messageNotFound)
                         return
                     }
-                    self.popularPhotos = photos
-                    self.collectionView.reloadData()
+                    self?.popularPhotos = photos
+                    self?.collectionView.reloadData()
                 case .failure(let error):
-                    self.showAlert(error.localizedDescription)
+                    self?.showAlert(error.localizedDescription)
                 }
             })
         }
